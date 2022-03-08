@@ -10,21 +10,32 @@ public class PasswordValidator {
 		
 		Scanner scnr = new Scanner(System.in);
 		
-		// asks user to create password with criteria as listed
-		
-		System.out.println(" Welcome to the password validator. Please create a password with the following requirements:\n" +
+		// asks user to create password with criteria as listed & stores value as userPassword
+				System.out.println(" Welcome to the password validator. Please create a password with the following requirements:\n" +
 		"  - At least one lowercase letter. \n" +
-		"  - At least one uppercase letter. \n" +
-		"  - At least minimum 7 characters. \n" +
-		"  - At least maximum 12 characters. \n" +
-		"  - An exclamation point (!)");
+		"  - At least one UPPERCASE letter. \n" +
+		"  - At minimum 7 characters. \n" +
+		"  - At maximum 12 characters. \n" +
+		"  - Contains an exclamation point (!).");
 		userPassword = scnr.nextLine();	
-		
-		// output message if all true, loop to re-input if false
-		
-		
-		
-		
+//		Validation validate = new Validation(userPassword);
+		if (Validation.isPasswordValid(userPassword)) {
+			System.out.println("Password valid and accepted");
+		} else {
+			System.out.println("Error");
+			
+		}
+				
+		scnr.close();
 	}
 
+	
+			
+		
+		// * -- If the user meets all the requirements, print the string "Password valid and accepted" to the console
+		// * -- If the password fails any of the requirements, print the string "Error".	
+		
+		
+		
 }
+
