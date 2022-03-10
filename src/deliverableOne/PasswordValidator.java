@@ -10,10 +10,9 @@ public class PasswordValidator {
 	
 	public static void main(String[] args) {
 		/*
-		 * For testing purposes, if a loop is more convenient, please remove comments within
-		 * the code pieces below. To stay within the project scope, however, I have omitted
-		 * the loop as part of the project. Hopefully this isn't against 'best practice,'
-		 * but I only added it for convenience of those testing my work. :)
+		 * For testing purposes, if a loop is more convenient, please remove single-line comments
+		 * within the main method below. To stay within the project scope, however, I have omitted
+		 * the loop as part of the project. It's there only for convenience of testing my work.
 		 */	
 
 //		boolean pwdLoop = true;
