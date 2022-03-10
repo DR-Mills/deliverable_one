@@ -1,7 +1,14 @@
 package deliverableOne;
 
+
+/**
+ * Contains string validation logics.
+ * 
+ * @author Dustin Mills
+ *
+ */
 public class Validation {
-	/*
+	/* Password Validation Requirements:
 	 * 1) Print a message asking the user to input a password via the console (1 point) --Main()
 	 * 2) Receive the input via the console (1 point) --Main()
 	 * 3) Check if there is at least one lowercase letter (1 point)
@@ -13,31 +20,28 @@ public class Validation {
 	 * 9) If the password isn’t valid, print "Error" (1 point) --Main()
 	 */
 
-//	String password;
-	
-//	public Validation(String pw) { password = pw; }
-	 
 
-	//Password Validator boolean return
-	public static boolean isPasswordValid(String pw) {
-		if (hasLowercase(pw) == true) {
-			if (hasUppercase(pw) == true) {
-				if (has7CharMin(pw) == true) {
-					if (doesNotExceed12CharMax(pw) == true) {
-						if (hasExclamation(pw) == true) {
-							return true;
-						}
-					}
-				}
-			}
+	/**
+	 * Accepts a string and validates against all password-specific deliverable requirements
+	 * 
+	 * @param pw a password entered by the user
+	 * @return true if requirements are met, otherwise false
+	 */
+	public static boolean isValidPassword(String pw) {
+		if (hasLowercase(pw) && hasUppercase(pw) && has7CharMin(pw) && doesNotExceed12CharMax(pw)
+				&& hasExclamation(pw)) {
+			return true;
 		}
 		return false;
 	}
-	
-	
-	//Boolean Logic Password Requirements Checks
-	//lowercase check
-	public static boolean hasLowercase(String str) {
+
+	/**
+	 * Accepts a string and validates it against deliverable point 1.3, contains lower case.
+	 * 
+	 * @param str a password String entered by the user.
+	 * @return true if String contains a lower case character, otherwise false.
+	 */
+	private static boolean hasLowercase(String str) {
 		for (int i = 0; i < str.length(); i++) {
 			if (Character.isLowerCase(str.charAt(i))) {
 				return true;
@@ -45,9 +49,15 @@ public class Validation {
 		}
 		return false;
 	}
-	
-	//uppercase check
-	public static boolean hasUppercase(String str) {
+
+
+	/**
+	 * Accepts a string and validates it against deliverable point 1.4, contains upper case.
+	 * 
+	 * @param str a password entered by the user.
+	 * @return true if String contains an upper case character, otherwise false.
+	 */
+	private static boolean hasUppercase(String str) {
 		for (int i = 0; i < str.length(); i++) {
 			if (Character.isLowerCase(str.charAt(i))) {
 				return true;
@@ -56,29 +66,49 @@ public class Validation {
 		return false;
 	}
 
-	//minimum 7 character check
-	public static boolean has7CharMin(String str) {
+
+	/**
+	 * Accepts a string and validates it against deliverable point 1.5, contains 
+	 * at least 7 characters.
+	 * 
+	 * @param str a password entered by the user.
+	 * @return true if String contains at least 7 characters, otherwise false.
+	 */
+	private static boolean has7CharMin(String str) {
 		if (str.length() >= 7) {
 			return true;
 		}
 		return false;
 	}
 	
-	//maximum 12 character check
-	public static boolean doesNotExceed12CharMax(String str) {
+
+	/**
+	 * Accepts a string and validates it against deliverable point 1.6, contains
+	 * at most 12 characters.
+	 * 
+	 * @param str a password entered by the user.
+	 * @return true if String contains no more than 12 characters, otherwise false.
+	 */
+	private static boolean doesNotExceed12CharMax(String str) {
 		if (str.length() <= 12) {
 			return true;
 		}
 		return false;
 	}
 	
-	//contains exclamation point (!) check
-	public static boolean hasExclamation(String str) {
+
+	/**
+	 * Accepts a string and validates it against deliverable point 1.7, contains
+	 * an exclamation point.
+	 * 
+	 * @param str a password entered by the user.
+	 * @return true if String contains an exclamation, otherwise false.
+	 */
+	private static boolean hasExclamation(String str) {
 		if (str.contains("!")) {
 			return true;
 		}
 		return false;
 	}
-
 
 }
