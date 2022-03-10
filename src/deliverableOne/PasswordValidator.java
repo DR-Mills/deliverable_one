@@ -9,9 +9,15 @@ public class PasswordValidator {
 	static String userPassword; 
 	
 	public static void main(String[] args) {
-		
-		boolean t = true;
-		while (t) {
+		/*
+		 * For testing purposes, if a loop is more convenient, please remove comments within
+		 * the code pieces below. To stay within the project scope, however, I have omitted
+		 * the loop as part of the project. Hopefully this isn't against 'best practice,'
+		 * but I only added it for convenience of those testing my work. :)
+		 */	
+
+//		boolean pwdLoop = true;
+//		while (pwdLoop) {
 			System.out.println(
 					" Welcome to the password validator. Please create a password with the following requirements:\n"
 							+ "  - At least one lowercase letter. \n" + "  - At least one UPPERCASE letter. \n"
@@ -22,15 +28,16 @@ public class PasswordValidator {
 
 			if (Validation.isValidPassword(userPassword)) {
 				System.out.println("Password valid and accepted");
-				t = false;
+//				pwdLoop = false;
 			} else {
 				System.out.println("Error");
 			}
-		}
-				
+
+//		}
 		scnr.close();
-	}
+
 
 		
+	}
 }
 
