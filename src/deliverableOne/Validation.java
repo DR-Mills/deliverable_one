@@ -27,8 +27,12 @@ public class Validation {
 	 * @param pw a password entered by the user
 	 * @return true if requirements are met, otherwise false
 	 */
-	public static boolean isValidPassword(String pw) { //fix me:  combine the code from line 73 to 99 into this method here
-		return hasLowercase(pw) && hasUppercase(pw) && has7CharMin(pw) && doesNotExceed12CharMax(pw) && hasExclamation(pw);
+	public static boolean isValidPassword(String pw) {
+		if (hasLowercase(pw) && hasUppercase(pw) && has7CharMin(pw) && doesNotExceed12CharMax(pw)
+				&& hasExclamation(pw)) {
+			return true;
+		}
+		return false;
 	}
 
 	/**
@@ -55,7 +59,7 @@ public class Validation {
 	 */
 	private static boolean hasUppercase(String str) {
 		for (int i = 0; i < str.length(); i++) {
-			if (Character.isUpperCase(str.charAt(i))) {
+			if (Character.isLowerCase(str.charAt(i))) {
 				return true;
 			}
 		}
@@ -70,7 +74,7 @@ public class Validation {
 	 * @param str a password entered by the user.
 	 * @return true if String contains at least 7 characters, otherwise false.
 	 */
-	private static boolean has7CharMin(String str) { // delete me
+	private static boolean has7CharMin(String str) {
 		if (str.length() >= 7) {
 			return true;
 		}
@@ -85,7 +89,7 @@ public class Validation {
 	 * @param str a password entered by the user.
 	 * @return true if String contains no more than 12 characters, otherwise false.
 	 */
-	private static boolean doesNotExceed12CharMax(String str) {  // delete me
+	private static boolean doesNotExceed12CharMax(String str) {
 		if (str.length() <= 12) {
 			return true;
 		}
@@ -100,8 +104,8 @@ public class Validation {
 	 * @param str a password entered by the user.
 	 * @return true if String contains an exclamation, otherwise false.
 	 */
-	private static boolean hasExclamation(String str) { // delete me
-		if (str.contains("!")) { 
+	private static boolean hasExclamation(String str) {
+		if (str.contains("!")) {
 			return true;
 		}
 		return false;
