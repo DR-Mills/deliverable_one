@@ -3,16 +3,26 @@ package deliverableOne;
 import java.util.Scanner;
 
 
+/**
+ * @author Dustin Mills
+ *
+ * Accepts a user input password String and validates it against Deliverable requirements.
+ */
 public class PasswordValidator {
     static Scanner scnr = new Scanner(System.in);
 		
 	static String userPassword; 
 	
+	/**
+	 * Prints welcome message with password requirements and accepts user input password String.
+	 * Validates password against deliverable requirements and produces message outputs
+	 * per deliverable if condition is met or not.
+	 */
 	public static void main(String[] args) {
 		/*
 		 * For testing purposes, if a loop is more convenient, please remove single-line comments
 		 * within the main method below. To stay within the project scope, however, I have omitted
-		 * the loop as part of the project. It's there only for convenience of testing my work.
+		 * the loop as part of the project.
 		 */	
 
 //		boolean pwdLoop = true;

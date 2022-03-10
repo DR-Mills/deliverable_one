@@ -12,7 +12,6 @@ package deliverableOne;
  * 9) If the password isn’t valid, print "Error" (1 point) --Main()
  */
 
-
 /**
  * Contains String validation (user submitted password) logic blocks.
  * 
