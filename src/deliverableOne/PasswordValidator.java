@@ -4,10 +4,11 @@ import java.util.Scanner;
 
 
 /**
- * @author Dustin Mills
- *
  * Accepts a user input password String and validates it against Deliverable requirements.
- */
+ *
+ * @author Dustin Mills
+ * 
+ * */
 public class PasswordValidator {
     static Scanner scnr = new Scanner(System.in);
 		
